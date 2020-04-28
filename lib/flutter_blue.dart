@@ -9,6 +9,7 @@ import 'dart:async';
 import 'package:collection/collection.dart';
 import 'package:convert/convert.dart';
 import 'package:flutter/services.dart';
+import 'package:hive/hive.dart';
 import 'package:meta/meta.dart';
 import 'package:rxdart/rxdart.dart';
 

@@ -4,10 +4,16 @@
 
 part of flutter_blue;
 
-class BluetoothDevice {
+@HiveType(typeId: 0)
+class BluetoothDevice extends HiveObject {
+  @HiveField(0)
   final DeviceIdentifier id;
+  @HiveField(1)
   final String name;
+  @HiveField(2)
   final BluetoothDeviceType type;
+  
+  BluetoothDevice({this.id, this.name, this.type});
 
   BluetoothDevice.fromProto(protos.BluetoothDevice p)
       : id = new DeviceIdentifier(p.remoteId),
